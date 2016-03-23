@@ -1,0 +1,21 @@
+{
+  "name": "exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "angular-ui-router": "^0.2.15",
+    "express": "^4.13.4",
+    "nightmare": "^2.2.0",
+    "promise": "^7.1.1",
+    "q": "^1.4.1",
+    "standard": "^6.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

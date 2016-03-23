@@ -1,0 +1,155 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+.nav{
+	width: 100%;
+	height: 100px;
+	float: left;
+	text-align: center;
+	background-color: #410021;
+}
+.nav img{
+	height: 100%;
+}
+.main{
+	width: 100%;
+	float: left;
+	/*background: url('./pic/wallpaper.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+  background-color: #810041;
+}
+.list{
+	width: 45%;
+	float: left;
+	margin: 30px 20px 30px 3%;
+	background-color: #e8e8e4;
+	border-radius: 3px;
+	box-shadow: 2px 3px 5px #000;
+}
+	.title{
+		width: 100%;
+		float: left;
+		font-size: 20px;
+		font-weight: 700;
+		padding: 10px 10px 0px 10px;
+	}
+	.line{
+		float: left;
+		width: 100%;
+		border: #eee 1px solid;
+		margin: 20px 0;
+		border-radius: 20px;
+	}
+	.book-list{
+		float: left;
+		width: 100%;
+		padding: 5px;
+	}
+	.book-list-select{
+		float: left;
+		width: 100%;
+		padding: 5px;
+	}
+	.book-list:hover{
+		opacity: 0.5;
+		cursor: pointer;
+	}
+		.name{
+			width: 50%;
+			float: left;
+			padding: 10px;
+		}
+		.price{
+			width: 10%;
+			float: left;
+			text-align: right;
+			padding: 10px;
+		}
+		.pic{
+			width: 20%;
+			float: left;
+		}
+			.pic img{
+				width: 100%;
+			}
+.SellList{
+	width: 45%;
+	float: left;
+	margin: 30px 10px;
+	padding-bottom: 20px;
+	background-color: #e8e8e4;
+	border-radius: 3px;
+	box-shadow: 2px 3px 5px #000;
+}
+	.inputNumber{
+		width: 50px;
+	}
+	.qty{
+			width: 10%;
+			float: left;
+			padding: 10px;
+		}
+	.delete{
+		float: left;
+		width: 10%;
+	}
+	.delete:hover{
+		cursor: pointer;
+	}
+	.del-pic{
+		width: 100%;
+		text-align: center;
+	}
+		.del-pic img{
+			width: 60%;
+
+		}
+	.result{
+		float: left;
+		width: 100%;
+		padding: 5px;
+	}
+	.TotalQty{
+		float: left;
+		width: 100%;
+	}
+	.TotalPrice{
+		float: left;
+		width: 100%;
+	}
+	.Discount{
+		float: left;
+		width: 100%;
+	}
+	.NetPrice .number{
+		float: left;
+		width: 33%;
+		text-align: center;
+		color: red;
+	}
+	.NetPrice{
+		float: left;
+		width: 100%;
+	}
+	.text{
+		float: left;
+		width: 33%;
+		text-align: left;
+	}
+	.number{
+		float: left;
+		width: 33%;
+		text-align: center;
+	}
+	.unit{
+		float: left;
+		width: 33%;
+		text-align: left;
+	}

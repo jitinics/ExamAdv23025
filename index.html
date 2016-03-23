@@ -1,0 +1,109 @@
+<html ng-app="index">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script type="text/javascript" src="./index.js"></script>
+</head>
+<body ng-controller="indexController">
+	<div class="main">
+		<div class="nav">
+			<img src="./pic/logo.gif">
+		</div>
+		<div class="list">
+			<div class="title">
+				รายการหนังสือ
+			</div>
+			<div class="line">	
+			</div>
+			<div class="book-list" ng-repeat="(key,data) in book" ng-click="bookSelect(key,$index+1)">
+				<div class="pic">
+					<img ng-src="./pic/{{($index+1)}}.jpg">
+				</div>	
+				<div class="name" id='list{{key}}'>
+					{{data.name}}
+				</div>
+				<div class="price">
+					{{data.price}}
+				</div>
+			</div>
+		</div>
+		<div class="SellList">
+			<div class="title">
+				รายการหนังสือที่ซื้อ
+			</div>
+			<div class="line">	
+			</div>
+			<div class="book-list-select" ng-repeat="(key,data) in bookSelected">
+				<div class="pic">
+					<img ng-src="./pic/{{data.pic}}.jpg">
+				</div>	
+				<div class="name" id='SellList{{key}}'>
+					{{data.name}} 
+				</div>
+				<div class="price">
+					{{data.price}}
+				</div>
+				<div class="qty">
+					<input id="selectedQty{{$index}}" type="number" class="inputNumber" min="0" ng-model="data.qty" ng-change="cal()" />
+				</div>
+				<div class="delete" id="selectedDelete{{$index}}" ng-click="remove(key)">
+					<div class="del-pic">
+					<img ng-src="./pic/delete.png">
+				</div>
+				</div>
+			</div>
+			<div class="bookList" ng-if="!result">
+				ยังไม่มีรายการที่ซื้อ
+			</div>
+			<div class="result" ng-if="result">
+				<div class="TotalQty" >
+					<div class="text">
+						รวม
+					</div>
+					<div class="number">
+						{{result.totalQty}}
+					</div>
+					<div class="unit">
+						เล่ม
+					</div>
+				</div>
+				<div class="TotalPrice" >
+					<div class="text">
+						ราคารวม
+					</div>
+					<div class="number">						
+						{{result.totalPrice}}
+					</div>
+					<div class="unit">
+						บาท
+					</div>
+				</div>
+				<div class="Discount" >
+					<div class="text">
+						ส่วนลด
+					</div>
+					<div class="number">
+						{{result.discount}}
+					</div>
+					<div class="unit">
+						เล่ม
+					</div>
+				</div>
+				<div class="NetPrice" >
+					<div class="text">
+						ราคาสุทธิ
+					</div>
+					<div class="number">
+						{{netPrice}}
+					</div>
+					<div class="unit">
+						เล่ม
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
+</body>
+</html>
