@@ -2,9 +2,10 @@ var Nightmare = require('nightmare')
 var nightmare = Nightmare({ show: false })
 var nightmare2 = Nightmare({ show: false })
 var nightmare3 = Nightmare({ show: false })
-var nightmare4 = Nightmare({ show: true })
+var nightmare4 = Nightmare({ show: false })
 var nightmare5 = Nightmare({ show: false })
 var url = 'http://localhost:8080/'
+var radix = 10
 nightmare
   .goto(url)
   .wait(500)
@@ -30,33 +31,32 @@ nightmare
     var discount = result[2]
     var net = result[3]
     console.log('quantity Check :')
-    if (parseInt(qty) === 3) {
-      console.log('pass, quantity is', parseInt(qty))
+    if (parseInt(qty, radix) === 3) {
+      console.log('pass, quantity is', parseInt(qty, radix))
     } else {
       console.log("fail the result must be 3 but It's" + result)
     }
     console.log('Total price Check :')
-    if (parseInt(price) === 300) {
-      console.log('pass, total is', parseInt(price))
+    if (parseInt(price, radix) === 300) {
+      console.log('pass, total is', parseInt(price, radix))
     } else {
       console.log("fail the result must be 3 but It's" + result)
     }
     console.log('Discount Check :')
-    if (parseInt(discount) === 20) {
-      console.log('pass, discount is', parseInt(discount))
+    if (parseInt(discount, radix) === 20) {
+      console.log('pass, discount is', parseInt(discount, radix))
     } else {
       console.log("fail the result must be 3 but It's" + result)
     }
     console.log('Netprice Check :')
-    if (parseInt(net) === 280) {
-      console.log('pass, net price is', parseInt(net))
+    if (parseInt(net, radix) === 280) {
+      console.log('pass, net price is', parseInt(net, radix))
     } else {
       console.log("fail the result must be 3 but It's" + result)
     }
     console.log('------------------------------------------------------------------')
   })
 nightmare.end()
-
 nightmare2
   .goto(url)
   .wait(500)
@@ -88,33 +88,32 @@ nightmare2
     var discount = result[2]
     var net = result[3]
     console.log('quantity Check :')
-    if (parseInt(qty) === 6) {
-      console.log('pass, quantity is', parseInt(qty))
+    if (parseInt(qty, radix) === 6) {
+      console.log('pass, quantity is', parseInt(qty, radix))
     } else {
       console.log("fail the result must be 3 but It's" + qty)
     }
     console.log('Total price Check :')
-    if (parseInt(price) === 600) {
-      console.log('pass, total is', parseInt(price))
+    if (parseInt(price, radix) === 600) {
+      console.log('pass, total is', parseInt(price, radix))
     } else {
       console.log("fail the result must be 3 but It's" + price)
     }
     console.log('Discount Check :')
-    if (parseInt(discount) === 60) {
-      console.log('pass, discount is', parseInt(discount))
+    if (parseInt(discount, radix) === 60) {
+      console.log('pass, discount is', parseInt(discount, radix))
     } else {
       console.log("fail the result must be 3 but It's" + discount)
     }
     console.log('Netprice Check :')
-    if (parseInt(net) === 540) {
-      console.log('pass, net price is', parseInt(net))
+    if (parseInt(net, radix) === 540) {
+      console.log('pass, net price is', parseInt(net, radix))
     } else {
       console.log("fail the result must be 3 but It's" + net)
     }
     console.log('------------------------------------------------------------------')
   })
 nightmare2.end()
-
 nightmare3
   .goto(url)
   .wait(500)
@@ -140,34 +139,32 @@ nightmare3
     var discount = result[2]
     var net = result[3]
     console.log('quantity Check :')
-    if (parseInt(qty) === 3) {
-      console.log('pass, quantity is', parseInt(qty))
+    if (parseInt(qty, radix) === 3) {
+      console.log('pass, quantity is', parseInt(qty, radix))
     } else {
       console.log("fail the result must be 3 but It's" + qty)
     }
     console.log('Total price Check :')
-    if (parseInt(price) === 300) {
-      console.log('pass, total is', parseInt(price))
-
+    if (parseInt(price, radix) === 300) {
+      console.log('pass, total is', parseInt(price, radix))
     } else {
       console.log("fail the result must be 3 but It's" + price)
     }
     console.log('Discount Check :')
-    if (parseInt(discount) === 60) {
-      console.log('pass, discount is', parseInt(discount))
+    if (parseInt(discount, radix) === 60) {
+      console.log('pass, discount is', parseInt(discount, radix))
     } else {
       console.log("fail the result must be 3 but It's" + discount)
     }
     console.log('Netprice Check :')
-    if (parseInt(net) === 240) {
-      console.log('pass, net price is', parseInt(net))
+    if (parseInt(net, radix) === 240) {
+      console.log('pass, net price is', parseInt(net, radix))
     } else {
       console.log("fail the result must be 3 but It's" + net)
     }
     console.log('------------------------------------------------------------------')
   })
 nightmare3.end()
-
 nightmare4
   .goto(url)
   .wait(500)
@@ -191,33 +188,32 @@ nightmare4
     var discount = result[2]
     var net = result[3]
     console.log('quantity Check :')
-    if (parseInt(qty) === 10) {
-      console.log('pass, quantity is', parseInt(qty))
+    if (parseInt(qty, radix) === 10) {
+      console.log('pass, quantity is', parseInt(qty, radix))
     } else {
       console.log("fail the result must be 3 but It's" + qty)
     }
     console.log('Total price Check :')
-    if (parseInt(price) === 1000) {
-      console.log('pass, total is', parseInt(price))
+    if (parseInt(price, radix) === 1000) {
+      console.log('pass, total is', parseInt(price, radix))
     } else {
       console.log("fail the result must be 3 but It's" + price)
     }
     console.log('Discount Check :')
-    if (parseInt(discount) === 0) {
-      console.log('pass, discount is', parseInt(discount))
+    if (parseInt(discount, radix) === 0) {
+      console.log('pass, discount is', parseInt(discount, radix))
     } else {
       console.log("fail the result must be 3 but It's" + discount)
     }
     console.log('Netprice Check :')
-    if (parseInt(net) === 1000) {
-      console.log('pass, net price is', parseInt(net))
+    if (parseInt(net, radix) === 1000) {
+      console.log('pass, net price is', parseInt(net, radix))
     } else {
       console.log("fail the result must be 3 but It's" + net)
     }
     console.log('------------------------------------------------------------------')
   })
 nightmare4.end()
-
 nightmare5
   .goto(url)
   .wait(500)
@@ -249,26 +245,26 @@ nightmare5
     var discount = result[2]
     var net = result[3]
     console.log('quantity Check :')
-    if (parseInt(qty) === 6) {
-      console.log('pass, quantity is', parseInt(qty))
+    if (parseInt(qty, radix) === 6) {
+      console.log('pass, quantity is', parseInt(qty, radix))
     } else {
       console.log("fail the result must be 3 but It's" + qty)
     }
     console.log('Total price Check :')
-    if (parseInt(price) === 600) {
-      console.log('pass, total is', parseInt(price))
+    if (parseInt(price, radix) === 600) {
+      console.log('pass, total is', parseInt(price, radix))
     } else {
       console.log("fail the result must be 3 but It's" + price)
     }
     console.log('Discount Check :')
-    if (parseInt(discount) === 80) {
-      console.log('pass, discount is', parseInt(discount))
+    if (parseInt(discount, radix) === 80) {
+      console.log('pass, discount is', parseInt(discount, radix))
     } else {
       console.log("fail the result must be 3 but It's" + discount)
     }
     console.log('Netprice Check :')
-    if (parseInt(net) === 520) {
-      console.log('pass, net price is', parseInt(net))
+    if (parseInt(net, radix) === 520) {
+      console.log('pass, net price is', parseInt(net, radix))
     } else {
       console.log("fail the result must be 3 but It's" + net)
     }
