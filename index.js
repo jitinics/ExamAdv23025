@@ -47,7 +47,6 @@ angular.module('index', []).controller('indexController', ['$scope', function ($
     console.log($scope.bookSelected)
     var keys = Object.keys($scope.bookSelected)
     $scope.result = {}
-    var qty = keys.length
     $scope.result.totalQty = 0
     $scope.result.totalPrice = 0
     keys.forEach(function (key) {
