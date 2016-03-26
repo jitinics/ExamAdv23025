@@ -55,9 +55,8 @@ angular.module('index', []).controller('indexController', ['$scope', function ($
       $scope.result.totalQty += $scope.bookSelected[key].qty
     })
     var bookSelectedCoppy = JSON.parse(JSON.stringify($scope.bookSelected))
-    $scope.result.discount = calculateDiscount(bookSelectedCoppy)
+    $scope.result.discount = Math.round(calculateDiscount(bookSelectedCoppy))
     $scope.netPrice = $scope.result.totalPrice - $scope.result.discount
-    setDeleteOveray(qty)
   }
   function calculateDiscount (bookSelected) {
     var discount = 0
@@ -78,12 +77,6 @@ angular.module('index', []).controller('indexController', ['$scope', function ($
       price = 0
     }
     return discount
-  }
-  function setDeleteOveray (qty) {
-    var DeleteOverayQty = []
-    for (var n = 0; n < qty; n++) {
-      DeleteOverayQty.push(false)
-    }
   }
   function remove (bookId) {
     delete $scope.bookSelected[bookId]
